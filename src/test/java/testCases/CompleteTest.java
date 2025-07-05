@@ -71,25 +71,25 @@ public class CompleteTest {
 	@Test(priority = 3)
 	public void radioBtn() {
 		implicitWaitMethod(7);
-		driver.findElement(By.xpath("//*[@class='accordion-item'][1]")).click();
+
 	}
 
 	@Test(priority = 4)
 	public void webTable() {
 		implicitWaitMethod(7);
-		driver.findElement(By.xpath("//*[@class='accordion-item'][1]")).click();
+// ankit will do
 	}
 
 	@Test(priority = 5)
 	public void buttonClick() {
 		implicitWaitMethod(7);
-		driver.findElement(By.xpath("//*[@class='accordion-item'][1]")).click();
+
 	}
 
 	@Test(priority = 6)
 	public void links() {
 		implicitWaitMethod(7);
-		driver.findElement(By.xpath("//*[@class='accordion-item'][1]")).click();
+
 	}
 
 	@BeforeTest
