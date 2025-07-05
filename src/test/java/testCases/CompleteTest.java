@@ -101,7 +101,7 @@ public class CompleteTest {
 
 	@AfterTest
 	public void tearDown() {
-		// driver.quit();
+		driver.quit();
 	}
 
 }
