@@ -77,7 +77,7 @@ public class CompleteTest {
 	@Test(priority = 4)
 	public void webTable() {
 		implicitWaitMethod(7);
-// ankit will do
+		driver.findElement(By.xpath("//*[@id=\"navMenus\"]//li[4]//a")).click();
 	}
 
 	@Test(priority = 5)
@@ -101,7 +101,7 @@ public class CompleteTest {
 
 	@AfterTest
 	public void tearDown() {
-		driver.quit();
+		// driver.quit();
 	}
 
 }
