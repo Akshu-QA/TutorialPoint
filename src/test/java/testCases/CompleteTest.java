@@ -67,7 +67,7 @@ public class CompleteTest {
 		subLevel1Disp.isDisplayed();
 
 		driver.findElement(By.xpath("//li[@id='bs_2']/span[@class='plus']")).click();
-		System.out.println("checkbox TC : PASS");
+		System.out.println("checkbox TC : PASSsss");
 
 	}
 
