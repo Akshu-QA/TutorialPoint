@@ -5,13 +5,10 @@
     <classes>
       <class name="testCases.CompleteTest">
         <methods>
-          <include name="links"/>
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="checkBox"/>
-          <include name="radioBtn"/>
           <include name="webTable"/>
-          <include name="buttonClick"/>
         </methods>
       </class> <!-- testCases.CompleteTest -->
     </classes>

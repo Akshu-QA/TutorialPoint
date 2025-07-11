@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -40,21 +41,23 @@ public class CompleteTest {
 	@Test(priority = 2)
 	public void checkBox() {
 		implicitWaitMethod(5);
+		
+		driver.findElement(By.xpath("//*[@class='accordion-item'][1]")).click();
+
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+		w.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//a[@href='check-box.php']"))))
+				.click();
 
 		WebElement checkBoxDisp = driver.findElement(By.xpath("//a[@href='check-box.php']"));
 
-		if (checkBoxDisp.isDisplayed()) {
-			checkBoxDisp.click();
-			System.out.println("checkbox module is display");
-		} else {
-			System.out.println("not displyed");
-		}
+		Assert.assertTrue(checkBoxDisp.isDisplayed(),"is displayed");
 
 		boolean checkBoxMainLevel1Disp = driver.findElement(By.xpath("//span[text()='Main Level 1 ']")).isDisplayed();
-		System.out.println("Main level is displayed" + checkBoxMainLevel1Disp);
+		Assert.assertEquals(checkBoxMainLevel1Disp, true);
+		
 
 		boolean checkBoxMainLevel2Disp = driver.findElement(By.xpath("//span[text()='Main Level 2 ']")).isDisplayed();
-		System.out.println("Main level is displayed" + checkBoxMainLevel2Disp);
+		Assert.assertEquals(checkBoxMainLevel2Disp, true);
 
 		driver.findElement(By.xpath("//input[@id='c_bs_1']")).click();
 		driver.findElement(By.xpath("//input[@id='c_bs_2']")).click();
