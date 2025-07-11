@@ -57,7 +57,7 @@ public class CompleteTest {
 		
 
 		boolean checkBoxMainLevel2Disp = driver.findElement(By.xpath("//span[text()='Main Level 2 ']")).isDisplayed();
-		Assert.assertEquals(checkBoxMainLevel2Disp, false);
+		Assert.assertEquals(checkBoxMainLevel2Disp, true);
 
 		driver.findElement(By.xpath("//input[@id='c_bs_1']")).click();
 		driver.findElement(By.xpath("//input[@id='c_bs_2']")).click();
